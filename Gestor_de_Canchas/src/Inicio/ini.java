@@ -49,6 +49,7 @@ private void ShowPanel (JPanel p){
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Inicio");
         setResizable(false);
 
         BG.setBackground(new java.awt.Color(255, 255, 255));
@@ -159,6 +160,7 @@ private void ShowPanel (JPanel p){
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIngresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMousePressed

@@ -31,10 +31,12 @@ public class ingresar extends javax.swing.JPanel {
         BG = new javax.swing.JPanel();
         Header = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
-        Panel1 = new javax.swing.JPanel();
-        txtUser = new javax.swing.JTextField();
+        User_Icon = new javax.swing.JPanel();
+        User_Field = new javax.swing.JPanel();
         txtPass = new javax.swing.JPasswordField();
-        Panel2 = new javax.swing.JPanel();
+        User_Field1 = new javax.swing.JPanel();
+        txtUser = new javax.swing.JTextField();
+        Pass_Icon = new javax.swing.JPanel();
         ingresarPanel = new javax.swing.JPanel();
         btnIngresar = new javax.swing.JLabel();
 
@@ -52,54 +54,73 @@ public class ingresar extends javax.swing.JPanel {
 
         BG.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 60));
 
-        javax.swing.GroupLayout Panel1Layout = new javax.swing.GroupLayout(Panel1);
-        Panel1.setLayout(Panel1Layout);
-        Panel1Layout.setHorizontalGroup(
-            Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        User_Icon.setBackground(java.awt.Color.gray);
+
+        javax.swing.GroupLayout User_IconLayout = new javax.swing.GroupLayout(User_Icon);
+        User_Icon.setLayout(User_IconLayout);
+        User_IconLayout.setHorizontalGroup(
+            User_IconLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 89, Short.MAX_VALUE)
         );
-        Panel1Layout.setVerticalGroup(
-            Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        User_IconLayout.setVerticalGroup(
+            User_IconLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        BG.add(Panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 70, 50));
+        BG.add(User_Icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 70, 50));
 
-        txtUser.setForeground(new java.awt.Color(111, 111, 111));
-        txtUser.setText("Ingrese su DNI");
-        txtUser.setToolTipText("");
-        txtUser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        txtUser.setSelectionColor(new java.awt.Color(0, 153, 204));
-        txtUser.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtUserKeyPressed(evt);
-            }
-        });
-        BG.add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 330, 50));
+        User_Field.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        txtPass.setBackground(new java.awt.Color(242, 242, 242));
         txtPass.setForeground(new java.awt.Color(111, 111, 111));
         txtPass.setText("********");
-        txtPass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        txtPass.setBorder(null);
         txtPass.setSelectionColor(new java.awt.Color(0, 153, 204));
         txtPass.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 txtPassMousePressed(evt);
             }
         });
-        BG.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 330, 50));
+        txtPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPassActionPerformed(evt);
+            }
+        });
+        User_Field.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 330, 50));
 
-        javax.swing.GroupLayout Panel2Layout = new javax.swing.GroupLayout(Panel2);
-        Panel2.setLayout(Panel2Layout);
-        Panel2Layout.setHorizontalGroup(
-            Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        BG.add(User_Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 340, 50));
+
+        User_Field1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtUser.setBackground(new java.awt.Color(242, 242, 242));
+        txtUser.setForeground(new java.awt.Color(111, 111, 111));
+        txtUser.setText("Ingrese su DNI");
+        txtUser.setToolTipText("");
+        txtUser.setBorder(null);
+        txtUser.setSelectionColor(new java.awt.Color(0, 153, 204));
+        txtUser.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtUserKeyPressed(evt);
+            }
+        });
+        User_Field1.add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 330, 50));
+
+        BG.add(User_Field1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 340, 50));
+
+        Pass_Icon.setBackground(java.awt.Color.gray);
+
+        javax.swing.GroupLayout Pass_IconLayout = new javax.swing.GroupLayout(Pass_Icon);
+        Pass_Icon.setLayout(Pass_IconLayout);
+        Pass_IconLayout.setHorizontalGroup(
+            Pass_IconLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 70, Short.MAX_VALUE)
         );
-        Panel2Layout.setVerticalGroup(
-            Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        Pass_IconLayout.setVerticalGroup(
+            Pass_IconLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        BG.add(Panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 70, 50));
+        BG.add(Pass_Icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 70, 50));
 
         ingresarPanel.setBackground(new java.awt.Color(0, 150, 94));
         ingresarPanel.setPreferredSize(new java.awt.Dimension(200, 50));
@@ -152,7 +173,9 @@ public class ingresar extends javax.swing.JPanel {
         String Pass = new String(txtPass.getPassword());
         
         if(txtUser.getText().equals(Usuario) && Pass.equals(password)){
-            
+            Menu menu = new Menu();
+            menu.setVisible(true);
+            this.setVisible(false);
         }
     }//GEN-LAST:event_btnIngresarMouseClicked
 
@@ -163,17 +186,6 @@ public class ingresar extends javax.swing.JPanel {
     private void btnIngresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMouseExited
         ingresarPanel.setBackground(new Color(0, 150, 94));
     }//GEN-LAST:event_btnIngresarMouseExited
-
-    private void txtUserKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUserKeyPressed
-        if (txtUser.getText().equals("Ingrese su DNI")){
-            txtUser.setText("");
-            txtUser.setForeground(Color.black);
-        }
-        if(String.valueOf(txtPass.getPassword()).isEmpty()){
-            txtPass.setText("********");
-            txtPass.setForeground(new Color(111, 111, 111));
-        }
-    }//GEN-LAST:event_txtUserKeyPressed
 
     private void txtPassMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtPassMousePressed
         if(String.valueOf(txtPass.getPassword()).equals("********")){
@@ -186,12 +198,29 @@ public class ingresar extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_txtPassMousePressed
 
+    private void txtPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPassActionPerformed
+
+    private void txtUserKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUserKeyPressed
+        if (txtUser.getText().equals("Ingrese su DNI")){
+            txtUser.setText("");
+            txtUser.setForeground(Color.black);
+        }
+        if(String.valueOf(txtPass.getPassword()).isEmpty()){
+            txtPass.setText("********");
+            txtPass.setForeground(new Color(111, 111, 111));
+        }
+    }//GEN-LAST:event_txtUserKeyPressed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BG;
     private javax.swing.JPanel Header;
-    private javax.swing.JPanel Panel1;
-    private javax.swing.JPanel Panel2;
+    private javax.swing.JPanel Pass_Icon;
+    private javax.swing.JPanel User_Field;
+    private javax.swing.JPanel User_Field1;
+    private javax.swing.JPanel User_Icon;
     private javax.swing.JLabel btnIngresar;
     private javax.swing.JPanel ingresarPanel;
     private javax.swing.JLabel title;
