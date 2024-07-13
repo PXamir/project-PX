@@ -1,8 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package Inicio;
+
+import OBJETS.ReservaDAO;
+
+
 
 /**
  *
@@ -10,10 +10,11 @@ package Inicio;
  */
 public class reservas extends javax.swing.JPanel {
 
-    /**
-     * Creates new form reservas
-     */
+       private ReservaDAO reservaDAO;
+
+    
     public reservas() {
+        reservaDAO = new ReservaDAO();
         initComponents();
     }
 
@@ -27,29 +28,54 @@ public class reservas extends javax.swing.JPanel {
     private void initComponents() {
 
         BG = new javax.swing.JPanel();
-        SubTitle = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
+        header = new javax.swing.JPanel();
+        jCalendar1 = new com.toedter.calendar.JCalendar();
 
         BG.setBackground(new java.awt.Color(255, 255, 255));
         BG.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SubTitle.setText("RESERVAS");
-        BG.add(SubTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+        title.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        title.setText("RESERVAS DE CANCHA");
+        BG.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
+
+        header.setBackground(new java.awt.Color(51, 102, 255));
+
+        javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
+        header.setLayout(headerLayout);
+        headerLayout.setHorizontalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1000, Short.MAX_VALUE)
+        );
+        headerLayout.setVerticalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 40, Short.MAX_VALUE)
+        );
+
+        BG.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 40));
+        BG.add(jCalendar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 730, 510));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(BG, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(BG, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BG;
-    private javax.swing.JLabel SubTitle;
+    private javax.swing.JPanel header;
+    private com.toedter.calendar.JCalendar jCalendar1;
+    private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

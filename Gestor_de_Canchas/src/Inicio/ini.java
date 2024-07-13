@@ -46,7 +46,6 @@ private void ShowPanel (JPanel p){
         barra = new javax.swing.JPanel();
         btnIngresar = new javax.swing.JLabel();
         btnRegistrar = new javax.swing.JLabel();
-        btnAdmin = new javax.swing.JLabel();
         Filtro = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
@@ -103,33 +102,16 @@ private void ShowPanel (JPanel p){
             }
         });
 
-        btnAdmin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnAdmin.setForeground(new java.awt.Color(0, 150, 94));
-        btnAdmin.setText("Administrador");
-        btnAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnAdminMousePressed(evt);
-            }
-        });
-        btnAdmin.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnAdminKeyPressed(evt);
-            }
-        });
-
         javax.swing.GroupLayout barraLayout = new javax.swing.GroupLayout(barra);
         barra.setLayout(barraLayout);
         barraLayout.setHorizontalGroup(
             barraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(barraLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
+                .addGap(91, 91, 91)
                 .addComponent(btnIngresar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 264, Short.MAX_VALUE)
                 .addComponent(btnRegistrar)
-                .addGap(105, 105, 105)
-                .addComponent(btnAdmin)
-                .addGap(43, 43, 43))
+                .addGap(94, 94, 94))
         );
         barraLayout.setVerticalGroup(
             barraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,8 +119,7 @@ private void ShowPanel (JPanel p){
                 .addGap(16, 16, 16)
                 .addGroup(barraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegistrar)
-                    .addComponent(btnIngresar)
-                    .addComponent(btnAdmin))
+                    .addComponent(btnIngresar))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -170,7 +151,6 @@ private void ShowPanel (JPanel p){
         ShowPanel(p1);
         btnIngresar.setForeground(new Color(0, 153, 255));
         btnRegistrar.setForeground(new Color(0, 150, 94));
-        btnAdmin.setForeground(new Color(0, 150, 94));
     }//GEN-LAST:event_btnIngresarMousePressed
 
     private void btnRegistrarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarMousePressed
@@ -178,20 +158,7 @@ private void ShowPanel (JPanel p){
         ShowPanel(p2);
         btnIngresar.setForeground(new Color(0, 150, 94));
         btnRegistrar.setForeground(new Color(0, 153, 255));
-        btnAdmin.setForeground(new Color(0, 150, 94));
     }//GEN-LAST:event_btnRegistrarMousePressed
-
-    private void btnAdminKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnAdminKeyPressed
-      
-    }//GEN-LAST:event_btnAdminKeyPressed
-
-    private void btnAdminMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdminMousePressed
-         administrar p3 = new administrar();
-        ShowPanel(p3);
-        btnIngresar.setForeground(new Color(0, 150, 94));
-        btnRegistrar.setForeground(new Color(0, 150, 94));
-        btnAdmin.setForeground(new Color(0, 153, 255));
-    }//GEN-LAST:event_btnAdminMousePressed
 
     /**
      * @param args the command line arguments
@@ -233,7 +200,6 @@ private void ShowPanel (JPanel p){
     private javax.swing.JLabel Filtro;
     private javax.swing.JLabel Fondo;
     private javax.swing.JPanel barra;
-    private javax.swing.JLabel btnAdmin;
     private javax.swing.JLabel btnIngresar;
     private javax.swing.JLabel btnRegistrar;
     private javax.swing.JPanel content;
